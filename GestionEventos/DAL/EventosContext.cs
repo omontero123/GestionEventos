@@ -1,6 +1,7 @@
 ﻿using GestionEventos.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Reflection.Emit;
 
 namespace GestionEventos.DAL
 {
@@ -15,6 +16,10 @@ namespace GestionEventos.DAL
                 table.eventoId,
                 table.personaId
             });
+            builder.Entity<Usuario>().HasData(
+               new Usuario() { Id = 1,correo="omontero123@gmail.com",nombre="osvaldo",contrasenia="qwerty" },
+               new Usuario() { Id = 2,correo = "omontero123@hotmail.com", nombre = "segundo", contrasenia = "qwerty" }
+            );
         }
 
         public DbSet<Evento> Eventos { get; set; }

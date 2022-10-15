@@ -1,7 +1,10 @@
-﻿namespace GestionEventos.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GestionEventos.Models
 {
     public class Persona
     {
+        [Key]
         public int Id { get; set; }
         public string correo { get; set; }
 
