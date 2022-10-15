@@ -10,7 +10,7 @@ namespace GestionEventos.Models
 
         public DateTime fecha { get; set; }
 
-        public virtual ICollection<Asistente> Asistentes { get; set; }
+        public virtual ICollection<Asistente>? Asistentes { get; set; }
 
     }
 }
